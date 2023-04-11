@@ -1,7 +1,9 @@
 const container = document.querySelector('.container')
+const myButton = document.querySelector('button');
+
 
 function getNumber() {
-    let number = prompt('How manay boxes should there be per side?', '');
+    let number = prompt('How many boxes should there be per side?', '');
     let divSize = 500 / number;
     
     for (let i = 0; i < number * number; i++) {
@@ -21,7 +23,6 @@ function getNumber() {
     (event) => {
         event.target.style.backgroundColor = 'yellow';
     }));
+
+    myButton.disabled = true;
 }
-
-
-
